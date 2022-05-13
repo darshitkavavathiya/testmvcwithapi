@@ -1,0 +1,72 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<h2>Customer List With api </h2>
+   <a class="curdbtn"asp-action="Create">Create New</a>
+
+
+<table class="table" id="Customertable">
+
+</table>
+
+
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary d-none" id="RowPopupModelBtn" data-bs-toggle="modal" data-bs-target="#RowPopup">
+ 
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="RowPopup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" >Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body"  id="CustomerDetailsBody">
+        
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Delete</button>
+                        <a class="btn btn-primary">Edit</a>
+ 
+    </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="RowEditPopup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" >Edit</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" >
+        
+          hello
+
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+@section Scripts {
+    <script src="~/js/Customerwithapi.js"></script>
+}

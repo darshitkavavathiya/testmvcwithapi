@@ -1,0 +1,113 @@
+﻿<section Id="DocumentGridContainer">
+
+
+    @*  <div class="input-group mb-3">
+        <span class="input-group-text" aria-describedby="AddNewDocumentBtn" >Add New Document</span>
+
+        <input type="button" class="form-control" id="AddNewDocumentBtn" aria-describedby="basic-addon3" value="+">
+
+
+        </div>*@
+
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Add New Document" value="Add New Document" disabled aria-label="Recipient's username" aria-describedby="AddNewDocumentBtn">
+        <button class="btn btn-primary" type="button" id="AddNewDocumentBtn" data-toggle="modal" data-target="#AddDocumentModel">+</button>
+    </div>
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="AddDocumentModel" tabindex="-1" role="dialog" aria-labelledby="AddDocumentModalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="AddDocumentModelLabel">Add New Document</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+
+                    <label for="DocType"> Select Document Type</label>
+                    <select id="DocType" class="form-control">
+                        <option value="00">select</option>
+                        <option value="image/bmp">image/bmp</option>
+                        <option value="image/gif">image/gif</option>
+                        <option value="image/jpeg">image/jpeg</option>
+                        <option value="image/png">image/png</option>
+                        <option value=" image/tiff">image/tiff</option>
+                        <option value="image/webp">image/webp</option>
+                        <option value="text/plain">text/plain</option>
+                        <option value="text/csv">text/csv</option>
+                        <option value="application/pdf">pdf</option>
+                        <option value="application/vnd.openxmlformats-officedocument.wordprocessingml.document">msword</option>
+                        <option value="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">ms-excel</option>
+                    </select>
+                    <input class="form-control mt-4"  disabled type="file" id="DocumentUpload" />
+                    <span id="documentvalidation" class="text-danger"></span>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="DocumentUploadBtn" disabled class="btn btn-primary">Upload</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @await Html.PartialAsync("loader")
+
+
+    <table class="table" id="DocumentGridTable">
+        
+
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+
+
+
+<section class="previewmodel">
+
+    <button type="button" id="PreviewModelBtn" class="btn btn-primary d-none" data-toggle="modal" data-target="#PreviewModel">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="PreviewModel" tabindex="-1" role="dialog" aria-labelledby="PreviewModelLabel" aria-hidden="true">
+  <div class="modal-dialog  modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="PreviewModelLabel">Document Preview</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="PreviewModelBody">
+       
+      </div>
+      
+    </div>
+  </div>
+</div>
+</section>

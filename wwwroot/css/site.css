@@ -1,0 +1,374 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    color: white !important;
+    font-weight:700;
+    font-size:22px;
+
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+.nav-item {
+    background: #6c7ae0 0% 0% no-repeat padding-box;
+    border: 1px solid #FFFFFF80;
+    padding: 0px 3px;
+    margin: 3px 5px;
+    border-radius: 50rem !important;
+    opacity: 1;
+}
+.curdbtn {
+    background: #6c7ae0 0% 0% no-repeat padding-box !important;
+    border: 1px solid #FFFFFF80 !important;
+    padding: 5px 12px !important;
+    margin: 5px 5px !important;
+    border-radius: 50rem !important;
+    opacity: 1;
+    text-decoration: none !important;
+    color: white !important;
+    max-width: 200px !important;
+}
+.curdbtn:hover{
+    text-decoration:none!important;
+    color:black !important;
+}
+.nav-item:hover {
+    color:black;
+    background: #ececff 0% 0% no-repeat padding-box;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+    .nav-item a {
+        margin: 0px;
+        padding: 3px;
+        color: white !important;
+    }
+
+
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1440px;
+    }
+}
+
+
+
+
+
+
+/*index*/
+
+thead {
+    background-color: #6c7ae0;
+}
+
+    thead :hover {
+        background-color: #c6c6f5;
+        /*  background-color: #999fd1;*/
+    }
+
+tr.even{
+    background-color: #ececff !important;
+}
+tr.odd {
+    background-color: #ffffff !important;
+}
+
+.titlecolor {
+    color: #6c7ae0 !important;
+}
+
+
+
+tbody tr:hover {
+    background-color: #c6c6f5 !important;
+}
+
+#CustomerIndexTable_wrapper{
+    color:navy!important;
+}
+
+    #CustomerIndexTable_wrapper select {
+        background-color: white !important;
+    }
+
+    #CustomerIndexTable_wrapper input {
+        background-color: white !important;
+    }
+
+
+dl dd input[type="checkbox"]{
+    pointer-events:none
+}
+
+.curdEdit,.curdDetails{
+    text-decoration:none;
+}
+.curdDelete{
+    color:red;
+}
+
+.curdEdit:hover, .curdDetails:hover{
+    text-decoration: none;
+}
+.curdDelete:hover {
+    color: red;
+    text-decoration: none;
+}
+
+dd{
+    color:black!important;
+    font-weight:500;
+}
+
+
+.circle {
+
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    border-radius: 50%;
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    background: black;
+}
+
+.d-inline-block p.text-center {
+    font-size: 25px;
+    font-weight: 500;
+    color: black;
+}
+#inactive {
+    margin: 10px 20px;
+    background: red;
+}
+#active {
+    margin: 10px 20px;
+    background: green;
+}
+#total {
+    margin: 10px 20px;
+    background: blue;
+}
+
+
+#DocumentGridTable tbody embed {
+   max-width: 200px;
+    max-height: 200px;
+}
+
+
+
+#DocumentGridTable tbody tr {
+    background-color: #ffffff !important;
+}
+
+
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+    .popup .popuptext {
+        visibility: hidden;
+        background-color: white;
+        opacity: 1;
+       
+        color: #646464;
+        border-radius: 4px;
+        text-align: left;
+        padding: 5px 0px;
+        position: absolute;
+        left:50px;
+        margin-left: -100px;
+        border: 1px solid #ccc;
+        box-shadow: 0 1px 1px 0;
+        z-index: 1;
+    }
+.popuptext p{
+    margin: 0;
+    padding: 2px 15px;
+}
+  
+    .popuptext p:hover {
+        background-color: aqua;
+        color:red;
+    }
+.popuptext .DeleteAction:hover {
+    background-color: red!important;
+    color: black!important;
+}
+
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    margin-left: -5px;
+    border-width: 5px;
+}
+
+    .popup .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+    }
+
+
+    /*loader css*/
+
+
+@keyframes ldio-kwpunsm497h {
+    0% {
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+
+.ldio-kwpunsm497h div {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 20px solid #0051a2;
+    border-top-color: transparent;
+    border-radius: 50%;
+}
+
+.ldio-kwpunsm497h div {
+    animation: ldio-kwpunsm497h 1s linear infinite;
+    top: 100px;
+    left: 100px
+}
+
+.loadingio-spinner-rolling-xtfxe9pk2q {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    overflow: hidden;
+    background: #f1f2f3;
+}
+
+.ldio-kwpunsm497h {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0; /* see note above */
+}
+
+    .ldio-kwpunsm497h div {
+        box-sizing: content-box;
+    }
+
+
+
+    .modelpreviewheight {
+        height: 500px !important;
+    }
+
+.dt-buttons {
+    float:none !important;
+    display: flex !important;
+    justify-content:flex-end!important;
+}
+
+
+
+
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #FFFFFF;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+}
+
+    .dropdown-content a:hover {
+        color: #FFFFFF;
+        background-color: #00A4BD;
+    }

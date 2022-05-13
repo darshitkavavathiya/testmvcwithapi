@@ -1,0 +1,163 @@
+﻿@model IEnumerable<testmvc.Models.Customer>
+
+@{
+    var i = 0;
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-center mt-4 titlecolor" >Customer List</h1>
+
+<p class=" d-flex justify-content-end">
+   <a class="curdbtn"asp-action="Create">Create New</a>
+</p>
+<table class="table" id="CustomerIndexTable">
+    <thead>
+        <tr>
+            <th>
+               Id
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.Mobile)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsActive)
+            </th>
+              <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model=>model.StateName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model=>model.CountryName)
+
+            </th>
+         <th> Edit </th>
+             <th> Details </th>
+              <th> Delete </th>
+        </tr>
+    </thead>
+    <tbody style="background-color:#e9ebf0">
+
+        
+@foreach (var item in Model) {
+
+           
+          <tr>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+        
+            <td>
+                @Html.DisplayFor(modelItem => item.Mobile)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsActive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StateName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountryName)
+            </td>     
+            <td>
+               
+                @Html.ActionLink("Edit", "Edit", new { id=item.CustomerId },new {@class="curdEdit"}) 
+                
+            </td>
+            <td> 
+                @Html.ActionLink("Details", "Details", new { id=item.CustomerId },new {@class="curdDetails"}) 
+
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { id=item.CustomerId },new {@class="curdDelete"})
+
+            </td>
+
+        </tr>
+}
+    </tbody>
+</table>
+             @*@await Html.PartialAsync("DynemicGridPartialview")*@
+      
+
+
+@section Scripts {
+<script>
+    $(document).ready(function () { 
+        
+        
+        
+        
+        
+        
+        
+        
+       
+    
+    
+    
+    $('#CustomerIndexTable').DataTable({
+        dom: "itlp",
+        responsive: true,
+        pagingType: "full_numbers",
+        language: {
+
+            paginate: {
+                first: "",
+                previous: "previous",
+                next: "next",
+                last: "",
+            },
+            info: "Total Records : _MAX_",
+
+            lengthMenu: "Show  _MENU_  Entries",
+        },
+        //buttons: [
+        //     'csv', 'excel'
+        //], 
+
+        iDisplayLength: 5,
+        aLengthMenu: [[5, 10, 15, -1], [5, 10, 15, "All"]],
+        columnDefs: [{ orderable: false, targets: 0 }],
+
+        order: [[0, "desc"]],
+
+
+
+    });
+
+    
+    
+    
+    
+    
+    });
+    @if(TempData["toast"]!=null){
+       @Html.Raw(TempData["toast"].ToString())
+    }
+</script>
+}

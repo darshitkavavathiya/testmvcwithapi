@@ -1,0 +1,107 @@
+﻿@model testmvc.Models.Customer
+
+@{
+ 
+    string mapsrc="https://maps.google.com/maps?width=100%25&height=100%25&hl=en&q="+Model.StateName.Replace(" ", "%20")+"&t=&z=6&ie=UTF8&iwloc=B&output=embed";
+    ViewData["Title"] = "Details";
+}
+
+<h3 class="text-center titlecolor" style="margin-top:50px;">Customer Details</h3>
+
+
+
+<div class="row  d-flex justify-content-center">
+    <div class="col-lg-8">
+        <hr />
+        <div class="row">
+        <div class="col">
+
+
+
+
+            <dl class="row">
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.CustomerId)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.CustomerId)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.FirstName)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.LastName)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.LastName)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Mobile)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Mobile)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.CreatedDate)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.CreatedDate)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Address)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Address)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.CountryName)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.CountryName)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.StateName)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.StateName)
+                </dd>
+
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.IsActive)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.IsActive)
+                </dd>
+            </dl>
+        </div>
+        <div class="col">
+
+         <iframe  width="350" height="350" frameborder='0'  scrolling='no' marginheight='0' marginwidth='0'  src=@mapsrc><a href="https://www.gps.ie/wearable-gps/">gps smartwatches</a></iframe>
+
+
+
+
+        </div>
+</div>
+    </div>
+    <div class="row  d-flex justify-content-center">
+        <div class="col-2">
+        @Html.ActionLink("Edit", "Edit", new { id=Model.CustomerId })
+        |
+        <a asp-action="Index">Back to List</a>
+        </div> 
+
+
+    </div>
+</div>
+
+

@@ -1,0 +1,126 @@
+﻿@model testmvc.Models.Customer
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class=" mt-4 row  d-flex justify-content-center">
+    <div class="col-md-6">
+        <h3 class="text-center  titlecolor mt-4"> Edit Customer </h3>
+
+
+        <hr />
+
+
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+
+                <div class="form-group col">
+                    <label asp-for="FirstName" class="control-label"></label>
+                                        <input asp-for="FirstName" class="form-control" />
+
+
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="form-group col">
+                    <label asp-for="LastName" class="control-label"></label>
+                    <input asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col ">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col">
+                    <label asp-for="Mobile" class="control-label"></label>
+                    <input asp-for="Mobile" class="form-control" />
+                    <span asp-validation-for="Mobile" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="Address" class="control-label"></label>
+                    <input asp-for="Address" class="form-control" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col">
+                    <label asp-for="Countryid" class="control-label"></label>
+                    <span id="idforcountry" class="d-none">@Model.Countryid</span>
+                    <select asp-for="Countryid" class="form-control"></select>
+
+                    <span asp-validation-for="Countryid" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="Stateid" class="control-label"></label>
+                    <span id="idforstate" class="d-none">@Model.Stateid</span>
+
+                    <select asp-for="Stateid" class="form-control"></select>
+                    <span asp-validation-for="Stateid" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col">
+                     <label class="form-check-label mt-5 ms-4">
+                        <input class="form-check-input" asp-for="IsActive" /> @Html.DisplayNameFor(model => model.IsActive)
+                    </label>
+                    <label asp-for="CustomerId" class="control-label d-none"></label>
+                    <input asp-for="CustomerId" class="form-control d-none" />
+                    <span asp-validation-for="CustomerId" class="text-danger"></span>
+                </div>
+            </div>
+@*
+
+            <div class="row">
+                <div class="form-group form-check col">
+                   
+                </div>
+
+
+
+            </div>
+*@
+            @*<iframe src="~/js/dsa.pdf" style="width: 100%;height: 100%;border: none;"></iframe>*@
+
+
+
+
+
+                                 
+
+
+
+
+                @await Html.PartialAsync("_customerDocumentgrid")
+
+            <div class="form-group row d-flex justify-content-center">
+                <input type="submit" value="Save" class="curdbtn" />
+            </div>
+        </form>
+    </div>
+
+
+
+</div>
+
+
+
+<div class="d-flex justify-content-center">
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+<script src="~/js/Customer.js"></script>
+<script src="~/js/CustomerEdit.js"></script>
+
+
+    @{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
+}
